@@ -1,0 +1,825 @@
+@charset "utf-8";
+
+@import url('fonts.css');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap');
+
+html {font-size: 16px;}
+body {font-family: 'Noto Sans KR', sans-serif; color: #555;}
+
+.inner {padding: 0 20px; box-sizing: border-box;}
+.container {max-width: 1400px; margin: 0 auto;}
+
+body > form {display: none;}
+
+/* header */
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc; box-sizing: border-box;
+    z-index: 100;
+}
+header .inner {
+    position: relative;
+    max-width: 1600px; height: 100px;
+    margin: 0 auto;
+}
+header .logo {
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    width: 270px;
+}
+header .logo .hLogo img {
+    display: block;
+    width: 146px;
+}
+header .logo .lang {
+    position: absolute;
+    top: 14px; right: 0;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 700;
+}
+header .logo .lang a {
+    padding: 0 8px;
+}
+header .logo .lang a.ko {position: relative; color: #222;}
+header .logo .lang a.ko:before {
+    content: '';
+    position: absolute;
+    top: 6px; right: -3px;
+    width: 1px; height: 8px;
+    background-color: #999;
+}
+header .logo .lang a.en {color: #999;}
+header .gnb .depth1 {text-align: center;}
+header .gnb .depth1 > li {display: inline-block; position: relative;}
+header .gnb .depth1 > li > a {
+    display: block;
+    height: 100px; line-height: 100px;
+    padding: 0 40px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+header .gnb .depth1 > li .depth2 {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    height: 260px;
+    z-index: 10;
+    display: none;
+}
+header .gnb .depth1 > li .depth2 li a {
+    display: block;
+    padding: 10px 0;
+}
+header .gnb .depth1 > li .depth2 li:first-child a {
+    padding-top: 30px;
+}
+header .gnb .depth1 > li:hover > a,
+header .gnb .depth1 > li .depth2 li:hover a {
+    color: #602a19;
+}
+header .gnb .depth1 > li::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    width: 0; height: 3px;
+    background-color: #602a19;
+    transition: all 0.3s;
+}
+header .gnb .depth1 > li:hover:before {
+    width: 50%;
+}
+header .gnb .depth1 > li::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 50%;
+    width: 0; height: 3px;
+    background-color: #602a19;
+    transition: all 0.3s;
+}
+header .gnb .depth1 > li:hover::after {
+    width: 50%;
+}
+header .search {
+    position: absolute;
+    top: 50%; right: 0;
+    transform: translateY(-50%);
+}
+header .search a {
+    position: absolute;
+    font-size: 24px;
+    color: #000;
+    top: 5px; left: -40px;
+}
+header .search .form input {
+    border: none;
+    padding-right: 10px;
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+}
+header .search .form button {
+    border: none;
+    width: 15px; height: 15px;
+    background: url(../img/www_ksgdw_com/search-icon.png) no-repeat center;
+    background-size: 100%;
+}
+.bgGnb {
+    position: fixed;
+    left: 0; right: 0; top: 100px;
+    min-height: 260px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: none;
+    z-index: 5;
+}
+.mHeader,.mBgGnb, .mGnb {display: none;}
+
+/* mainImg */
+#mainImg {
+    margin-top: 101px;
+    background-color: #eeebe4;
+    height: 797px;
+}
+#mainImg .contents {max-width: 1600px; height: 100%; margin: 0 auto;}
+#mainImg .contents > div {overflow: hidden;}
+#mainImg .contents .contInfo {
+    float: left;
+    width: auto;
+    margin-top: 300px;
+    letter-spacing: -0.5px;
+}
+#mainImg .contents .contInfo h2 {
+    font-size: 70px;
+    color: #222;
+    font-weight: 700;
+}
+#mainImg .contents .contInfo .info {
+    font-size: 28px;
+    font-weight: 500;
+    color: #565656;
+    margin-top: 10px;
+}
+#mainImg .contents .contInfo .tag {
+    color: #222; 
+    font-weight: 300;
+    margin-top: 15px;
+}
+#mainImg .contents figure {
+    float: right;
+    max-width: 1213px; height: 100%; width: 100%;
+}
+#mainImg .contents figure img {
+    display: block;
+    height: 797px; width: 100%;
+}
+
+/* titleArea - 공통 */
+.titleArea {text-align: center;}
+.titleArea h2 {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: #111;
+}
+.titleArea .sTitle {
+    margin-top: 10px;
+    color: #666;
+    font-weight: 300;
+}
+
+/* brand */
+#brand {
+    padding: 80px 0;
+    box-sizing: border-box;
+}
+.brandTap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 90px;
+    padding-top: 60px;
+}
+.brandTap .tapDepth1 {
+    flex: 1;
+    position: relative;
+}
+.brandTap .tapDepth1 > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    height: 80px;
+    border-bottom: 2px solid #ccc;
+}
+.brandTap .tapDepth1 .category {
+    position: absolute;
+    top: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+.brandTap .tapDepth1 .category .tapDepth2 > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    font-weight: 400;
+    color: #333;
+    font-size: 18px;
+}
+.brandCont {
+    display: flex;
+    justify-content: space-between;
+}
+.brandCont .brandList {
+    overflow: hidden;
+    position: relative;
+    width: 47%; height: 690px;
+}
+.brandCont .brandList div {
+    width: 100%; height: 100%;
+}
+.brandCont .brandList a {
+    display: block;
+    position: relative;
+    width: 100%; height: 100%;
+    overflow: hidden;
+}
+.brandCont .brandList a img {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    width: auto; height: auto;
+    min-width: 1000%; min-height: 1000%;
+}
+.brandCont .brandInfo {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 47%;
+}
+.brandCont .brandInfo .titleBox .title {
+    font-size: 40px;
+    font-weight: 500;
+    color: #111;
+}
+.brandCont .brandInfo .titleBox .titleInfo {
+    font-size: 32px;
+    font-weight: 300;
+    color: #111;
+    margin: 20px 0;
+}
+.brandCont .brandInfo .titleBox .text {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #666;
+    letter-spacing: -0.5px;
+}
+.brandCont .brandInfo .brandImg {
+    display: flex;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 18px;
+}
+.brandCont .brandInfo .brandImg .item {
+    margin-right: 10px;
+}
+.brandCont .brandInfo .brandImg img {
+    display: block;
+    width: 140px; height: 140px;
+    margin-bottom: 5px;
+}
+.brandCont .brandInfo .moreArea {margin-top: 40px; text-align: right;}
+.brandCont .brandInfo .brandMore {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-weight: 500;
+    color: #111;
+}
+.brandCont .brandInfo .brandMore:hover {color: #602a19;}
+.brandCont .brandInfo .brandMore::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    width: 100%; height: 2px;
+    background-color: #111;
+}
+.brandCont .brandInfo .brandMore:hover:before {background-color: #602a19;}
+.brandCont .brandInfo .brandMore i {
+    font-size: 20px;
+}
+
+
+/* news */
+#news {
+    padding: 80px 0;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+}
+#news .text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.newsCont {position: relative; padding-top: 70px;}
+.newsCont .newsL {float: left; width: 50%;}
+.newsCont .newsL .leftCont a {display: block; margin: 10px 0;}
+.newsCont .newsL .leftCont a img {
+    display: block;
+    width: 160px; height: 160px;
+    float: left;
+}
+.newsCont .newsL .leftCont a .detail {
+    float: left;
+    width: 480px;
+    margin-left: 20px;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+.newsCont .newsL .leftCont a .detail h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #111;
+}
+.newsCont .newsL .leftCont a .detail .text {
+    color: #666;
+    font-weight: 300;
+}
+.newsCont .newsL .leftCont a .detail .date {
+    color: #666;
+    font-size: 15px;
+    font-weight: 300;
+}
+#news .newsCont .newsL .leftCont1 a .detail .text {
+    -webkit-line-clamp: 1;
+    margin: 22px 0;
+}
+.newsCont .newsL .leftCont2 a .detail .text {height: 24px; margin: 22px 0;}
+.newsCont .newsL .leftCont3 a .detail .text {margin: 10px 0;}
+
+
+
+.newsCont .newsR {float: right; width: 50%;}
+.newsCont .newsR .rightCont a {display: block;}
+.newsCont .newsR .rightCont figure {
+    position: relative;
+    overflow: hidden;
+    max-width: 680px; height: 380px;
+}
+.newsCont .newsR .rightCont figure img {
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 680px; height: 680px;
+}
+.newsCont .newsR .rightCont .detail {margin-top: 24px;}
+.newsCont .newsR .rightCont .detail h4 {
+    font-size: 24px; 
+    font-weight: 500;
+    color: #111;
+}
+.newsCont .newsR .rightCont .detail .text {
+    margin: 10px 0;
+    color: #666;
+    font-weight: 300;
+}
+.newsCont .newsR .rightCont .detail .date {
+    font-size: 15px;
+    font-weight: 300;
+    color: #666;
+}
+.newsCont .newsMore {
+    position: absolute;
+    top: 0; right: 0;
+    padding-bottom: 5px;
+    color: #111;
+    font-weight: 500;
+}
+.newsCont .newsMore:hover {color: #602a19;}
+.newsCont .newsMore::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    width: 100%; height: 2px;
+    background-color: #111;
+}
+.newsCont .newsMore:hover:before {background-color: #602a19;}
+.newsCont .newsMore i {
+    font-size: 20px;
+}
+
+
+
+/* sns */
+#sns {
+    padding: 80px 0;
+    box-sizing: border-box;
+}
+#sns .container .snsArea {
+    padding: 40px 0;
+    text-align: right;
+}
+#sns .container .snsArea img {
+    vertical-align: middle;
+}
+#sns .container .snsArea .name {
+    padding-left: 8px;
+    padding-right: 15px;    
+}
+#sns .container .snsArea .follow {
+    display: inline-block;
+    color: #111;
+    padding: 5px 10px;
+    border: 1px solid #111;
+    border-radius: 20px;
+}
+#sns .container .snsList li {
+    float: left;
+    width: calc(100%/4 - 20px);
+    margin: 10px;
+}
+#sns .container .snsList li a {display: block; width: 100%; height: 330px;}
+#sns .container .snsList li a .snsCont {
+    position: relative;
+    width: 100%; height: 100%;
+}
+#sns .container .snsList li a .snsCont .imgBx {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; height: 100%;
+}
+#sns .container .snsList li a .snsCont .imgBx img {
+    display: block;
+    width: 100%; height: 100%;
+}
+#sns .container .snsList li a .snsCont .txtBx {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; height: 100%;
+    text-align: center;
+    line-height: 330px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+#sns .container .snsList li a .snsCont .txtBx span {
+    color: rgba(255, 255, 255, 0.7);
+}
+#sns .container .snsList li a .snsCont .txtBx .text {
+    position: absolute;
+    top: 50%; left: 54%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 14px;
+}
+#sns .container .snsList li a .snsCont:hover .txtBx {
+    opacity: 1;
+}
+/* footer */
+footer {
+    padding: 50px 0;
+    border-top: 1px solid #ddd;
+}
+footer .container {position: relative;}
+footer .container .logo {
+    position: absolute;
+    top: 0; left: 0;
+    width: 120px; height: 37px;
+}
+footer .container .logo img {
+    display: block;
+    width: 100%; height: 100%;
+}
+footer .container .textBox {padding-left: 250px; color: #3e3e3e;}
+footer .container .textBox .link {margin-bottom: 10px;}
+footer .container .textBox .link span {padding: 0 8px; position: relative;}
+footer .container .textBox .link span:first-child {
+    padding-left: 0;
+    color: #111;
+    font-weight: 500;
+}
+footer .container .textBox .link span:nth-child(1)::before,
+footer .container .textBox .link span:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 8px; right: -3px;
+    width: 1px; height: 10px;
+    background-color: #333;
+
+}
+footer .container .textBox .ftTxt {
+    margin-bottom: 10px;
+    color: #3e3e3e;
+    font-size: 14px;
+    line-height: 1.7;
+}
+footer .container .textBox .ftTxt .txt span {padding: 0 8px;}
+footer .container .textBox .ftTxt .txt span:first-child {
+    position: relative;
+    padding-left: 0;
+}
+footer .container .textBox .ftTxt .txt span:first-child::before {
+    content: '';
+    position: absolute;
+    top: 4px; right: -2px;
+    width: 1px; height: 14px;
+    background-color: #818181;
+}
+footer .container .textBox .copyright {
+    font-size: 14px;
+    color: #3e3e3e;
+}
+footer .container .family {
+    position: absolute;
+    top: 0; right: 0;
+}
+footer .container .family > button {
+    border: none;
+    color: #fff;
+    background-color: #111;
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+footer .container .family > button i {
+    font-size: 14px;
+    padding-left: 15px;
+}
+footer .container .family .click {
+    position: absolute;
+    top: -250px; right: 0;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 400px;
+    background-color: #fff;
+    display: none;
+}
+footer .container .family .click .title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+}
+footer .container .family .click .text {
+    font-size: 15px;
+    color: #555;
+    padding: 10px 0 25px;
+    letter-spacing: -0.5px;
+}
+footer .container .family .click .siteList li {
+    float: left;
+    width: calc(100%/2);
+    font-size: 15px;
+    color: #111;
+    margin-bottom: 5px;
+}
+footer .container .family .click #close {
+    position: absolute;
+    top: 0; right: 0;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .inner {display: none;}
+    header {
+        height: 60px;
+        box-sizing: border-box;
+        padding: 0 2%;
+    }
+    header .mHeader {
+        display: block;
+    }
+    header .mHeader .logo {
+        left: 2%;
+    }
+    header .mHeader .util {
+        position: absolute;
+        top: 5px; right: 2%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 120px;
+    }
+    header .mHeader .util .heart {font-size: 24px;}
+    header .mHeader .util .mSearch {
+        display: inline-block;
+        width: 30px; height: 31px;
+        background: url(../img/www_ksgdw_com/search-icon-m.png) no-repeat center;
+        background-size: 100%;
+    }
+    header .mHeader .util .tab {font-size: 32px;}
+    body > form {
+        display: none;
+        position: fixed;
+        background-color: #fff;
+        top: 0; left: 0; right: 0;
+        height: 60px;
+        z-index: 101;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    body > form .form {
+        position: relative;
+        height: 100%;
+        line-height: 56px;
+    }
+    body > form .form input {
+        height: 45px; width: 300px;
+        background-color: #eee;
+        border: 1px solid #ddd;
+        border-radius: 25px;
+        padding: 0 7px;
+    }
+    body > form .form button {
+        position: absolute;
+        top: 22px; right: 39.5%;
+        width: 15px; height: 15px;
+        background: url(../img/www_ksgdw_com/search-icon.png) no-repeat center;
+        background-size: 100%;
+        border: none;
+    }
+    .mBgGnb {
+        z-index: 600;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0; bottom: 0; left: 0; right: 0;
+    }
+    .mGnb {
+        display: block;
+        z-index: 700;
+        max-width: 600px;
+        width: 100%;
+        background-color: #fff;
+        position: fixed;
+        top: 0; right: -100%;
+        height: 100vh;
+        box-sizing: border-box;
+        transition: all 0.5s;
+    }
+    .active {right: 0;}
+    .mGnb .mGnbHeader {
+        position: relative;
+        height: 60px;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box
+    }
+    .mGnb .mGnbHeader .logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .mGnb .mGnbHeader .logo .mLogo {
+        padding-left: 20px;
+        display: inline-flex;
+        align-items: center;
+    }
+    .mGnb .mGnbHeader .logo img {width: 160px;}
+    .mGnb .mGnbHeader .logo .lang {
+        padding-left: 36px;
+    }
+    .mGnb .mGnbHeader .logo .lang {
+        font-family: 'Maven Pro', sans-serif;
+        font-weight: 700;
+    }
+    .mGnb .mGnbHeader .logo .lang a {
+        padding: 0 8px;
+    }
+    .mGnb .mGnbHeader .logo .lang a.ko {position: relative; color: #222;}
+    .mGnb .mGnbHeader .logo .lang a.ko:before {
+        content: '';
+        position: absolute;
+        top: 6px; right: -3px;
+        width: 1px; height: 8px;
+        background-color: #999;
+    }
+    .mGnb .mGnbHeader .logo .lang a.en {color: #999;}
+    .mGnb .mGnbHeader .logo .heart {
+        font-size: 20px;
+        color: #000;
+    }
+    .mGnb .mGnbHeader .closeBtn {
+        position: absolute;
+        top: 0; right: 0;
+        text-align: center;
+        width: 60px; height: 60px;
+        color: #222;
+        font-size: 32px;
+    }
+    .mGnb .mGnbHeader .closeBtn i {line-height: 2;}
+    .mGnb .mGnbList li a {
+        display: block;
+        padding: 16px;
+        border-bottom: 1px solid #ddd;
+        font-size: 1.2rem;
+        color: #000;
+    }
+    #mainImg {margin-top: 60px;}
+    #mainImg .contents {position: relative;}
+    #mainImg .contents .cont {padding: 0 10px; max-width: 1200px; width: 100%;}
+    #mainImg .contents .contInfo {
+        float: none;
+        position: absolute;
+        top: 0; left: 2%;
+    }
+    #mainImg .contents figure {float: none; width: 100%;}
+    #mainImg .contents figure img {width: 100%;}
+
+    #brand .container {padding: 0 20px; box-sizing: border-box;}
+
+    #news .newsCont {
+        padding: 70px 20px 0 20px;
+    }
+    #news h4 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    #news .newsCont .newsL .leftCont a .detail {
+        width: 360px;
+    }
+    #news .newsCont .newsMore {right: 20px;}
+
+    #sns .container .snsList li a {height: 280px;}
+    #sns .container .snsList li a .snsCont .txtBx {line-height: 280px;}#sns .container .snsArea {padding: 40px 20px 40px 0;}
+
+    footer .container .logo {left: 20px;}
+    footer .container .family {right: 20px;}
+    footer .container .family .click {right: 10px;}
+}
+
+@media screen and (max-width: 1024px) {
+    #brand .brandCont {
+        flex-direction: column;
+    }
+    #brand .brandCont .brandList {width: 100%;}
+    #brand .brandCont .brandList img {width: 100%;}
+    #brand .brandCont .brandInfo {width: 100%; margin-top: 30px;}
+
+    #news .newsCont .newsR {float: none; width: 100%; margin-bottom: 40px;}
+    #news .newsCont .newsR .rightCont figure {max-width: 100%; width: 100%; height: 500px;}
+    #news .newsCont .newsR .rightCont figure img {width: 100%; max-width: 100%; height: auto;}
+    #news .newsCont .newsL {float: none; width: 100%;}
+    #news .newsCont .newsL .leftCont a .detail {width: 800px;}
+
+    #sns .container .snsList li {width: calc(100%/2 - 20px);}
+    #sns .container .snsList li a {height: 492px;}
+    #sns .container .snsList li a .snsCont .txtBx {line-height: 492px;}
+}
+
+@media screen and (max-width: 768px) {
+    #brand .brandTap {
+        display: block;
+    }
+    #brand .brandTap .tapDepth1 {
+        width: 100%;
+    }
+    #brand .brandTap .tapDepth1 + .tapDepth1 {
+        margin-top: 60px;
+    }
+    #brand .brandTap .tapDepth1 > a {font-size: 21px;}
+    #brand .brandTap .tapDepth1 .category .tapDepth2 > a {font-size: 15px;}
+    #brand .brandCont .brandInfo .titleBox .title {font-size: 35px;}
+    #brand .brandCont .brandInfo .titleBox .titleInfo {font-size: 28px;}
+    #brand .brandCont .brandInfo .titleBox .text {font-size: 18px;}
+
+
+
+    #news .newsCont .newsL .leftCont a .detail {width: 540px;}
+
+    #sns .container .snsList li a {height: 364px;}
+    #sns .container .snsList li a .snsCont .txtBx {line-height: 364px;}
+
+    footer .container .textBox {padding: 50px 0 70px 20px;}
+    footer .container .family {top: 80%;}
+    footer .container .textBox .link {font-size: 14px;}
+    footer .container .textBox .ftTxt {font-size: 12px;}
+    footer .container .textBox .ftTxt {font-size: 12px;}
+    footer .container .family .click {right: 10px;}
+}

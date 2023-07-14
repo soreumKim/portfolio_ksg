@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KS벽지</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="css/index.css">
+
+
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <div class="logo">
+                <a href="" class="hLogo"><img src="img/www_ksgdw_com/logo.png" alt="KS벽지 로고"></a>
+                <div class="lang">
+                    <a href="#" class="ko">KOR</a>
+                    <a href="#" class="en">ENG</a>
+                </div>
+            </div>
+            <nav class="gnb">
+                <ul class="depth1 clear">
+                    <li>
+                        <a href="#">케이에스더블유</a>
+                        <ul class="depth2">
+                            <li><a href="#">계열사</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">회사소개</a>
+                        <ul class="depth2">
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">CEO 인사말</a></li>
+                            <li><a href="#">LOGO 소개</a></li>
+                            <li><a href="#">채용정보</a></li>
+                            <li><a href="#">위치안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">제품소개</a>
+                        <ul class="depth2">
+                            <li><a href="#">제품소개</a></li>
+                            <li><a href="#">실크브랜드</a></li>
+                            <li><a href="#">합지브랜드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">홍보센터</a>
+                        <ul class="depth2">
+                            <li><a href="#">인증 및 수상</a></li>
+                            <li><a href="#">뉴스 및 언론홍보</a></li>
+                            <li><a href="#">SNS</a></li>
+                            <li><a href="#">이벤트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">인테리어</a>
+                        <ul class="depth2">
+                            <li><a href="#">시공사례</a></li>
+                            <li><a href="#">인테리어<br>스타일링</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                        <ul class="depth2">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">디자인상담</a></li>
+                            <li><a href="#">1:1문의</a></li>
+                            <li><a href="#">대리점 찾기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search clear">
+                <a href="#"><i class="xi-heart-o"></i></a>
+                <form action="#">
+                    <div class="form">
+                        <input type="search" title="검색어 입력" name="keyword" placeholder="제품번호를 입력해주세요">
+                        <button type="submit" title="검색버튼"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="mHeader">
+            <div class="logo">
+                <a href="" class="hLogo"><img src="img/www_ksgdw_com/logo.png" alt="KS벽지 로고"></a>
+                <div class="lang">
+                    <a href="#" class="ko">KOR</a>
+                    <a href="#" class="en">ENG</a>
+                </div>
+            </div>
+            
+            <div class="util">
+                <a href="#" class="heart"><i class="xi-heart-o"></i></a>
+                <a href="javascript:;" class="mSearch" id="searchBoxOpen"></a>
+                <a href="javascript:;" class="tab" id="tab"><i class="xi-bars"></i></a>
+            </div>
+        </div>
+    </header>
+    <form action="#">
+        <div class="form">
+            <input type="search" title="검색어 입력" name="keyword" placeholder="제품번호를 입력해주세요">
+            <button type="submit" title="검색버튼"></button>
+            <a href="javascript:;" class="close" id="searchBoxClose"><i class="xi-close"></i></a>
+        </div>
+    </form>
+    <div class="bgGnb"></div>
+    <div class="mBgGnb"></div>
+    <div class="mGnb">
+        <div class="mGnbHeader">
+            <div class="logo">
+                <a href="#" class="mLogo"><img src="img/www_ksgdw_com/logo.png" alt="KS벽지 로고"></a>
+                <div class="lang">
+                    <a href="#" class="ko">KOR</a>
+                    <a href="#" class="en">ENG</a>
+                </div>
+                <a href="#" class="heart"><i class="xi-heart-o"></i></a>
+            </div>
+            <div class="closeBtn">
+                <a href="javascript:;" id="mGnbClose"><i class="xi-close"></i></a>
+            </div>
+        </div>
+        <ul class="mGnbList">
+            <li><a href="#">케이에스더블유</a></li>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">제품소개</a></li>
+            <li><a href="#">홍보센터</a></li>
+            <li><a href="#">인테리어</a></li>
+            <li><a href="#">고객센터</a></li>
+        </ul>
+
+    </div>
+
+    <section id="mainImg">
+        <div class="contents">
+            <div class="cont cont01">
+                <div class="contInfo">
+                    <h2>이룸</h2>
+                    <p class="info">나만의 공간을 이루다</p>
+                    <p class="tag">
+                        <span>#프리미엄</span>
+                        <span>#친환경</span>
+                        <span>#실크벽지</span>
+                        <span>#고급패턴</span>
+                    </p>
+                </div>
+                <figure><img src="img/www_ksgdw_com/2039250692_jxARKV1u_20230106083315.jpg" alt=""></figure>
+            </div>
+            <div class="cont cont02">
+                <div class="contInfo">
+                    <h2>더뷰</h2>
+                    <p class="info">
+                        벽지, 그 이상의 <br>
+                        공간을 보여주다
+                    </p>
+                    <p class="tag">
+                        <span>#프리미엄</span>
+                        <span>#친환경</span>
+                        <span>#실크벽지</span>
+                        <span>#감각적인디자인</span>
+                    </p>
+                </div>
+                <figure><img src="img/www_ksgdw_com/2039250692_KWLCgv8D_20230117093427.jpg" alt=""></figure>
+            </div>
+            <div class="cont cont03">
+                <div class="contInfo">
+                    <h2>벨루체</h2>
+                    <p class="info">
+                        당신이 꿈꾸는 <br>
+                        라이프스타일이 담긴 공간
+                    </p>
+                    <p class="tag">
+                        <span>#친환경</span>
+                        <span>#합지벽지</span>
+                        <span>#모던디자인</span>
+                        <span>#심플한컬러</span>
+                    </p>
+                </div>
+                <figure><img src="img/www_ksgdw_com/2039250692_6C5APbM4_20230117093459.jpg" alt=""></figure>
+            </div>
+            <div class="cont cont04">
+                <div class="contInfo">
+                    <h2>더홈</h2>
+                    <p class="info">우리집에 꼭 맞는 스타일링</p>
+                    <p class="tag">
+                        <span>#소폭합지</span>
+                        <span>#합리적가격</span>
+                        <span>#깔끔한디자인</span>
+                    </p>
+                </div>
+                <figure><img src="img/www_ksgdw_com/2039250692_XxTgUouv_20230117093727.jpg" alt=""></figure>
+            </div>
+        </div>
+    </section>
+
+    <section id="brand">
+        <div class="container">
+            <div class="titleArea">
+                <h2>COLLECTION</h2>
+            </div>
+            <ul class="brandTap">
+                <li class="tapDepth1">
+                    <a href="#">실크브랜드</a>
+                    <ul class="category">
+                        <li class="tapDepth2"><a href="#">더뷰 The View</a></li>
+                        <li class="tapDepth2"><a href="#">이룸 E-ROOM</a></li>
+                        <li class="tapDepth2"><a href="#">방염</a></li>
+                    </ul>
+                </li>
+                <li class="tapDepth1">
+                    <a href="#">합지 브랜드</a>
+                    <ul class="category">
+                        <li class="tapDepth2"><a href="#">벨루체 VELUCE</a></li>
+                        <li class="tapDepth2"><a href="#">더홈 The Home</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="brandCont">
+                <div class="brandList">
+                    <div><a href="#"><img src="img/www_ksgdw_com/2039250692_x5iDUwA2_20220818011106.jpg" alt=""></a></div>
+                    <div><a href="#"><img src="img/www_ksgdw_com/2039250692_nOzahD4Z_20220811042054.jpg" alt=""></a></div>
+                    <div><a href="#"><img src="img/www_ksgdw_com/2039250692_awm7kx9h_20220811042054.jpg" alt=""></a></div>
+                    <div><a href="#"><img src="img/www_ksgdw_com/2039250692_mYpwb6c9_20220811042054.jpg" alt=""></a></div>
+                    <div><a href="#"><img src="img/www_ksgdw_com/2039250692_MSCqFcVN_20220818011237.jpg" alt=""></a></div>
+                    <div><a href="#"><img src="img/www_ksgdw_com/2039250692_woskA0WD_20220811042054.jpg" alt=""></a></div>
+                </div>
+
+                <div class="brandInfo">
+                    <div class="titleBox">
+                        <p class="title">더뷰 The View</p>
+                        <p class="titleInfo">"벽지 그 이상의 공간을 보다"</p>
+                        <p class="text">
+                            더뷰는 스타일리시한 컬러와 패턴 디자인으로 <br>
+                            트렌디함을 갖춘 고급 실크벽지 컬렉션입니다. <br> <br>
+                            내 공간을 특별하게 만드는 한 끗 차이. <br>
+                            더뷰가 수놓은 감각적인 디자인으로 <br>
+                            내가 가장 좋아하는 공간을 만들어보세요.
+                        </p>
+                    </div>
+                    <div class="brandImg">
+                        <div class="item">
+                            <a href="#"><img src="img/3015.jpg" alt=""></a>
+                            <p>3015-3</p>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img src="img/3011.jpg" alt=""></a>
+                            <p>3011-5</p>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img src="img/3009.jpg" alt=""></a>
+                            <p>3009-30</p>
+                        </div>
+                    </div>
+                    <div class="moreArea">
+                        <a href="#" class="brandMore">
+                                <i class="xi-long-arrow-right"></i>
+                                제품 더보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news">
+        <div class="titleArea">
+            <h2>NEWS</h2>
+            <p class="sTitle">KS벽지의 새로운 소식을 전합니다</p>
+        </div>
+
+        <div class="container newsCont clear">
+            <div class="newsR">
+                <div class="rightCont">
+                    <a href="#">
+                        <figure><img src="img/www_ksgdw_com/rightcont.jpg" alt=""></figure>
+                        <div class="detail">
+                            <h4>KS벽지, 특판 신제품 데코리어(DECORIOR)출시</h4>
+                            <p class="text">
+                                케이에스더블유의 친환경 벽지 기업 KS벽지가 건설사 특판 전문 실크벽지인 데코리어(DECORIOR)의 세 번째 컬렉션 ‘데코리어3’을 출시했다고 밝혔다. 2023년 신제품 벽지인 ‘데코리어3’은 ‘BREATHES LIFE INTO SPACE’라는 컨셉트로 현재 모델하우스 인테리어 트랜드를 반영하여 각각의 라이프스타일에 자연스럽게 어울리는 내추럴 무드의 베이스 제품들로 구성되어 있다.
+                            </p>
+                            <span class="date">2023.06.26</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="newsL">
+                <div class="leftCont leftCont1">
+                    <a href="#" class="clear">
+                        <img src="img/www_ksgdw_com/237492673_IUcd3H6B_20230609020408.jpg" alt="">
+                        <div class="detail">
+                            <h4>벨라필콘서트콰이어 제10회 정기연주회 후원</h4>
+                            <p class="text">벨라필콘서트콰이어는 예술지향과 소통을 모토로 2014년 12월 고양시를 기반으로 창단된 연주 중심의 아마추어 혼성합창단으로</p>
+                            <span class="date">2023.06.09</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="leftCont leftCont2">
+                    <a href="#" class="clear">
+                        <img src="img/www_ksgdw_com/2039250692_7VcKymbC_20230106090120.jpg" alt="">
+                        <div class="detail">
+                            <h4>[신제품출시] E-ROOM</h4>
+                            <p class="text"></p>
+                            <span class="date">2023.01.06</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="leftCont leftCont3">
+                    <a href="#" class="clear">
+                        <img src="img/www_ksgdw_com/2039250692_rwke98Zn_20230103094646.jpg" alt="">
+                        <div class="detail">
+                            <h4>벽지 제조기업 KS더블유, 천만불 수출의 탑 수상</h4>
+                            <p class="text">벽지 제조기업 케이에스더블유(KS더블유)는 제 59회 무역의날 기념식에서 '천만불 수출의 탑' 을 수상했다고 5일 밝혔다. 무역의 날은 1년간의 수출 실적을 기준으로</p>
+                            <span class="date">2023.01.03</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <a href="#" class="newsMore">
+                <i class="xi-long-arrow-right"></i>
+                뉴스 더보기
+            </a>
+        </div>
+    </section>
+
+    <section id="sns">
+        <div class="titleArea">
+            <h2>SNS</h2>
+            <p class="sTitle">KS벽지의 더 많은 소식을 SNS로 만나보세요</p>
+        </div>
+
+        <div class="container">
+            <div class="snsArea">
+                <img src="img/www_ksgdw_com/sns-icon.jpg" alt="">
+                <span class="name">kswallcoverings</span>
+                <a href="#" class="follow">팔로우</a>
+            </div>
+
+            <ul class="snsList clear">
+                <li>
+                    <a href="#">
+                        <div class="snsCont">
+                            <div class="imgBx">
+                                <img src="img/www_ksgdw_com/237492673_Q6Mv5JtR_20230619092702.jpg" alt="">
+                            </div>
+                            <div class="txtBx">
+                                <p class="text">
+                                    <span>[COLOR OF BLUE]</span> <br>
+                                    여름의 컬러, 블루 인테리어
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="snsCont">
+                            <div class="imgBx">
+                                <img src="img/www_ksgdw_com/237492673_Q1oDJqgn_20230613011646.jpg" alt="">
+                            </div>
+                            <div class="txtBx">[EROOM] Cane Weaving</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="snsCont">
+                            <div class="imgBx">
+                                <img src="img/www_ksgdw_com/237492673_5UtAwRDM_20230607111521.jpg" alt="">
+                            </div>
+                            <div class="txtBx">[EROOM] 2105</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="snsCont">
+                            <div class="imgBx">
+                                <img src="img/www_ksgdw_com/237492673_vo2V7Bk3_20230523103315.jpg" alt="">
+                            </div>
+                            <div class="txtBx">[EROOM] 2095</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="snsCont">
+                            <div class="imgBx">
+                                <img src="img/www_ksgdw_com/237492673_8zw0Q7mW_20230508012136.jpg" alt="">
+                            </div>
+                            <div class="txtBx">[EROOM] 2101-5</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="snsCont">
+                            <div class="imgBx">
+                                <img src="img/www_ksgdw_com/237492673_3DltKUM5_20230427023842.jpg" alt="">
+                            </div>
+                            <div class="txtBx">[EROOM] 2109-1,4</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="snsCont">
+                            <div class="imgBx">
+                                <img src="img/www_ksgdw_com/237492673_srx5ALV4_20230403020537.jpg" alt="">
+                            </div>
+                            <div class="txtBx">
+                                <p class="text">
+                                    <span>[COLOR OF YELLOW]</span> <br>
+                                    봄의 컬러, 옐로우 인테리어
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="snsCont">
+                            <div class="imgBx">
+                                <img src="img/www_ksgdw_com/237492673_Iu5FtfwL_20230329091506.jpg" alt="">
+                            </div>
+                            <div class="txtBx">[EROOM] 2106-5,7</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo">
+                <img src="img/www_ksgdw_com/logo-footer.png" alt="">
+            </div>
+            <div class="textBox">
+                <div class="link">
+                    <span>개인정보처리방침</span>
+                    <span>이메일무단수집거부</span>
+                    <span>이용약관</span>
+                </div>
+                <div class="ftTxt">
+                    <p class="txt">
+                        <span>대표자 : 박식순</span>
+                        <span>사업자등록번호 : 365-85-01709</span>
+                    </p>
+                    <p class="txt">
+                        주소 : 경기도 이천시 장호원읍 서동대로 8798-50
+                    </p>
+                    <p class="txt">
+                        대표번호 : 031-642-6111
+                    </p>
+                </div>
+                <div class="copyright">
+                    <p class="txt">
+                        &copy; 2022 KSWALLCOVERINGS ALL Rights Reserved. Created by masstige
+                    </p>
+                </div>
+            </div>
+            <div class="family">
+                <button type="button">
+                    패밀리사이트
+                    <i class="fas fa-plus"></i>
+                </button>
+                <div class="click">
+                    <div class="title">패밀리사이트</div>
+                    <p class="text">
+                        KS벽지 패밀리 사이트를 소개합니다. <br>
+                        아래계열사를 선택하시면 해당 홈페이지로 이동합니다.
+                    </p>
+                    <ul class="siteList clear">
+                        <li><a href="#">KS더블유</a></li>
+                        <li><a href="#">제일벽지</a></li>
+                        <li><a href="#">케이엔피이노텍</a></li>
+                        <li><a href="#">코스모스벽지</a></li>
+                        <li><a href="#">케이엔피물류</a></li>
+                    </ul>
+                    <button id="close" type="button">
+                        <i class="xi-close"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
